@@ -34,11 +34,9 @@ const ShoppingList = () => {
     const topRatedItems = items.filter(
         (item) => item.attributes.category === "topRated"
     )
-
-    const newArrivalItems = items.filter(
-        (item) => item.attributes.category === "newArrivals"
-    )
-
+    const newArrivalsItems = items.filter(
+        (item) => item.attributes.category === "newArrivals "
+    );
     const bestSellersItems = items.filter(
         (item) => item.attributes.category === "bestSellers"
     )
@@ -78,7 +76,7 @@ const ShoppingList = () => {
                 { value === "all" && items.map((item) => (
                     <Item item={item} key={`${item.name}-${item.id}`} />
                 ))}
-                { value === "newArrivals" && newArrivalItems.map((item) => (
+                { value === "newArrivals" && newArrivalsItems.map((item) => (
                     <Item item={item} key={`${item.name}-${item.id}`} />
                 ))}
                 { value === "bestSellers" && bestSellersItems.map((item) => (
@@ -92,4 +90,4 @@ const ShoppingList = () => {
     )
 }
 
-export default ShoppingList
+export default ShoppingList;
