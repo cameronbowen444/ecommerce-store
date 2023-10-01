@@ -8,10 +8,5 @@ module.exports = [
   'strapi::body',
   'strapi::session',
   'strapi::favicon',
-  {
-    name: 'strapi::public',
-    config: {
-      path: './test',
-    },
-  },
+  'strapi::public',
 ];
